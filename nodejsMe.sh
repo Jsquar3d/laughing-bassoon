@@ -13,7 +13,6 @@ else
 fi
 
 function userHelp(){
-
 	printf "\nCommands:\n"
 	printf "\n\t install \t Installs nodejs on system.\n"
 	printf "\t update  \t Updates nodejs to new version.\n"
