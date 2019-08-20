@@ -15,4 +15,4 @@ Available commands:
 Program will make a dot file in the same directory as itself named .njsme
 the dot file in vital for program to run correctly so dont delete it.
 
-nodejsME is intended for debian based linux distros only.
+nodejsME is intended for 64bit debian based linux distros only.
