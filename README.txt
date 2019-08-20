@@ -13,6 +13,6 @@ Available commands:
 			exit
 
 Program will make a dot file in the same directory as itself named .njsme
-the dot file in vital for prgram to run correctly so dont delete it.
+the dot file in vital for program to run correctly so dont delete it.
 
 nodejsME is intended for debian based linux distros only.
