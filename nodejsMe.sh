@@ -24,9 +24,9 @@ function userHelp(){
 function nodejsInstall(){	
 	printf "\n [*] Installing latest stable nodejs\n\n"
 	sleep "0.50"
-	wget https://www.nodejs.org/en/download/
+	wget https://nodejs.org/en/download/
 	cat index.html | grep linux-x64.tar.xz | awk -F/ '{ print $5 }' > .njsme
-	rm index.html && wget https://www.nodejs.org/dist/$(cat .njsme)/node-$(cat .njsme)-linux-x64.tar.xz
+	rm index.html && wget https://nodejs.org/dist/$(cat .njsme)/node-$(cat .njsme)-linux-x64.tar.xz
         tar -xvf node-$(cat .njsme)-linux-x64.tar.xz && cd node-$(cat .njsme)-linux-x64
 	cd bin && mv node npm npx /usr/bin
 	cd .. && cd include && mv node /usr/include
@@ -41,9 +41,9 @@ function nodejsInstall(){
 function updateInstall(){       
         printf "\n [*] Updating with latest stable nodejs\n\n"
 	sleep "0.50"
-        wget https://www.nodejs.org/en/download/
+        wget https://nodejs.org/en/download/
         cat index.html | grep linux-x64.tar.xz | awk -F/ '{ print $5 }' > .njsme
-        rm index.html && wget https://www.nodejs.org/dist/$(cat .njsme)/node-$(cat .njsme)-linux-x64.tar.xz
+        rm index.html && wget https://nodejs.org/dist/$(cat .njsme)/node-$(cat .njsme)-linux-x64.tar.xz
         tar -xvf node-$(cat .njsme)-linux-x64.tar.xz && cd node-$(cat .njsme)-linux-x64
         cd bin && mv node npm npx /usr/bin
         cd .. && cd include && mv node /usr/include
@@ -58,7 +58,7 @@ function updateInstall(){
 function nodejsUpdate(){
        printf "\n[*] Checking if new nodejs version exists\n\n"
        sleep "0.50"
-       wget https://www.nodejs.org/en/download/
+       wget https://nodejs.org/en/download/
        verCheck=$(cat index.html | grep linux-x64.tar.xz | awk -F/ '{ print $5 }')
        ver=$(cat .njsme)
        if [ "$ver" == "$verCheck" ]
