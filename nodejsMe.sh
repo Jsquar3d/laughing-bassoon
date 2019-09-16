@@ -26,8 +26,8 @@ function nodejsInstall(){
 	wget https://nodejs.org/en/download/
 	cat index.html | grep linux-x64.tar.xz | awk -F/ '{ print $5 }' > .njsme
 	rm index.html && wget https://nodejs.org/dist/$(cat .njsme)/node-$(cat .njsme)-linux-x64.tar.xz
+        myDir=($pwd)
         tar -xvf node-$(cat .njsme)-linux-x64.tar.xz && cd node-$(cat .njsme)-linux-x64
-	myDir=($pwd)
 	cd bin && mv node npm npx /usr/bin
 	cd .. && cd include && mv node /usr/include
 	cd .. && cd lib && mv node_modules /usr/lib
