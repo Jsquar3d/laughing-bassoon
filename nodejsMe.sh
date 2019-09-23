@@ -7,7 +7,7 @@ then
 	exit
 else
 	cat banner.txt
-	printf "\ntype: help for command list\n"
+	printf "\nType: help for command list\n"
 	 
 fi
 
@@ -83,7 +83,7 @@ function nodejsUninstall(){
 	cd lib && rm -r node_modules && cd ..
 	cd share/doc && rm -r node && cd ..
 	cd man/man1 && rm node.1 && cd /usr/share
-	cd systemtap/tapset && rm node.stp && cd $myDir
+	cd systemtap/tapset && rm node.stp && cd $myDir && rm .njsme
 	printf "\n[*] All files for nodejs have been removed\n\n"
 }
 
